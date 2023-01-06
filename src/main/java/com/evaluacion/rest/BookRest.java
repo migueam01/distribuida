@@ -36,7 +36,6 @@ public class BookRest {
     }
 
     @PUT
-    @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public void update(Book book) {
@@ -47,7 +46,7 @@ public class BookRest {
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public void delete(Integer id) {
+    public void delete(@PathParam("id") Integer id) {
         bookService.delete(id);
     }
 }
