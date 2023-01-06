@@ -24,9 +24,7 @@ dependencies {
     runtimeOnly 'org.jboss:jandex'
 
     implementation("org.jdbi:jdbi3-core:3.36.1-SNAPSHOT")
-    // Load bill of materials (BOM) for Jdbi.
-    implementation(platform("org.jdbi:jdbi3-bom:3.36.1-SNAPSHOT"))
-    implementation("org.jdbi:jdbi3-core")
+
 }
 sourceSets{
     main {
